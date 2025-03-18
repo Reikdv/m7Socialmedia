@@ -13,10 +13,11 @@ document.addEventListener("DOMContentLoaded", function () {
                         time: postCount + " hours ago",
                         title: "Post Title " + postCount,
                         content: "This is the content of post " + postCount + ". It can be text, images, or videos.",
-                        imageUrl: "https://via.placeholder.com/600x300",
+                        imageUrl: `https://picsum.photos/600/300?random=${postCount}`,
+                        userProfilePic: `https://picsum.photos/40/40?random=${postCount + 100}`,
                         comments: [
-                            { username: "commenter1", time: "1 hour ago", content: "Great post!" },
-                            { username: "commenter2", time: "30 minutes ago", content: "I totally agree!" }
+                            { username: "commenter1", time: "1 hour ago", content: "Great post!", profilePic: `https://picsum.photos/40/40?random=${postCount + 200}` },
+                            { username: "commenter2", time: "30 minutes ago", content: "I totally agree!", profilePic: `https://picsum.photos/40/40?random=${postCount + 300}` }
                         ]
                     });
                 }
@@ -31,7 +32,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         post.innerHTML = `
             <div class="post-header">
-                <img src="https://via.placeholder.com/40" alt="User Profile Picture">
+                <img src="${postData.userProfilePic}" alt="User Profile Picture" class="profile-pic">
                 <div>
                     <div class="username">${postData.username}</div>
                     <div class="time">${postData.time}</div>
@@ -40,7 +41,7 @@ document.addEventListener("DOMContentLoaded", function () {
             <div class="post-body">
                 <h2>${postData.title}</h2>
                 <p>${postData.content}</p>
-                <img src="${postData.imageUrl}" alt="Post Image" loading="lazy">
+                <img src="${postData.imageUrl}" alt="Post Image" loading="lazy" class="post-image">
             </div>
             <div class="post-footer">
                 <span>Upvotes: <span class="upvote-count">0</span></span>
@@ -56,7 +57,10 @@ document.addEventListener("DOMContentLoaded", function () {
             commentElement.classList.add("comment");
 
             commentElement.innerHTML = `
-                <div class="comment-header">${comment.username} <span class="time">${comment.time}</span></div>
+                <div class="comment-header">
+                    <img src="${comment.profilePic}" alt="Commenter Profile Picture" class="comment-profile-pic">
+                    ${comment.username} <span class="time">${comment.time}</span>
+                </div>
                 <div class="comment-body">${comment.content}</div>
             `;
             commentSection.appendChild(commentElement);
