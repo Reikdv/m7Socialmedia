@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facebook</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="facebook-logo.png" alt="Facebook Logo">
+        </div>
+        <div class="search-bar">
+            <input type="text" placeholder="Search Facebook">
+        </div>
+        <nav class="nav-links">
+            <a href="#" class="active"><i class="fas fa-home"></i></a>
+            <a href="#"><i class="fas fa-user-friends"></i></a>
+            <a href="#"><i class="fas fa-tv"></i></a>
+            <a href="#"><i class="fas fa-store"></i></a>
+            <a href="#"><i class="fas fa-users"></i></a>
+            <a href="#"><i class="fas fa-bell"></i></a>
+            <a href="#"><i class="fas fa-user-circle"></i></a>
+        </nav>
+    </header>
+
+    <div class="main-content">
+        <div class="left-sidebar">
+            <div class="user-profile">
+                <img src="profile-pic.jpg" alt="Profile Picture">
+                <span>Your Name</span>
+            </div>
+            <ul>
+                <li><a href="#"><i class="fas fa-user-friends"></i> Friends</a></li>
+                <li><a href="#"><i class="fas fa-users"></i> Groups</a></li>
+                <li><a href="#"><i class="fas fa-store"></i> Marketplace</a></li>
+                <li><a href="#"><i class="fas fa-tv"></i> Watch</a></li>
+                <li><a href="#"><i class="fas fa-history"></i> Memories</a></li>
+                <li><a href="#"><i class="fas fa-bookmark"></i> Saved</a></li>
+                <li><a href="#"><i class="fas fa-flag"></i> Pages</a></li>
+                <li><a href="#"><i class="fas fa-calendar-alt"></i> Events</a></li>
+                <li class="see-more"><a href="#">See More</a></li>
+            </ul>
+        </div>
+        
+        <div class="posts-container" id="posts-container">
+            <div class="create-post">
+                <img src="profile-pic.jpg" alt="Profile Picture">
+                <input type="text" placeholder="What's on your mind?">
+                <div class="post-options">
+                    <button><i class="fas fa-video"></i> Live Video</button>
+                    <button><i class="fas fa-images"></i> Photo/Video</button>
+                    <button><i class="fas fa-smile"></i> Feeling/Activity</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="right-sidebar">
+            <div class="sponsored">
+                <h4>Sponsored</h4>
+                <!-- Sponsored content -->
+            </div>
+            <div class="contacts">
+                <div class="contacts-header">
+                    <h4>Contacts</h4>
+                    <div class="contact-actions">
+                        <i class="fas fa-video"></i>
+                        <i class="fas fa-search"></i>
+                        <i class="fas fa-ellipsis-h"></i>
+                    </div>
+                </div>
+                <ul class="contact-list">
+                    <!-- Contact list will be populated dynamically -->
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+    <script src="https://kit.fontawesome.com/your-kit-code.js"></script>
+    <script src="/script/script.js"></script>
+</body>
+</html>
